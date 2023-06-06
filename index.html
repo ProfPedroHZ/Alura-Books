@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alura Books</title>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +16,7 @@
 <body>
     <header class="cabecalho">
         <div class="container">
-            <input type="checkbox" id="menu" class="conteiner_botao">
+            <input type="checkbox" id="menu" class="container_botao">
             <label for="menu">
                 <span class="cabecalho_menu_hamburguer container_imagem"></span>
             </label>
@@ -49,8 +50,43 @@
     <section class="banner">
         <h2 class="banner_titulo">Já sabe por onde começar?</h2>
         <p class="banner_texto">Encontre em nossa estante o que precisa para o seu desenvolvimento!</p>
-        <input type="search" class="banner_pesquisa" placeholder="Qual será sua próxima leitura?">
+        <input type="search" class="banner_pesquisa" placeholder="    Qual será sua próxima leitura?">
     </section>
+
+    <section class="carrossel">
+        <h2 class="carrossel_titulo">Novos Lançamentos</h2>
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="img/ApacheKafka.png" alt="Livro 1"></div>
+            <div class="swiper-slide"><img src="img/Liderança.png" alt="Livro sobre Liderança"></div>
+            <div class="swiper-slide"><img src="img/Javascript.png" alt="Livro sobre JavaScript"></div>
+            <div class="swiper-slide"><img src="img/Guia Front-end.png" alt="Guia Font-end"></div>
+            <div class="swiper-slide"><img src="img/Portugol.png" alt="Livro sobre a linguagem Portugol"></div>
+            
+            </div>
+                    
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            spaceBetween: 10,
+            slidesPerView: 3,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+        });
+    </script>
 
     <footer>
 
